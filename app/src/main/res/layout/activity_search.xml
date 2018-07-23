@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/parent_search"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <AutoCompleteTextView
+            android:id="@+id/search_content"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:layout_margin="10dp"
+            android:hint="请输入搜索内容"
+            android:textSize="14dp"
+            android:paddingLeft="10dp"
+            android:maxLines="1"
+            android:completionThreshold="0"
+            android:maxLength="15"
+            android:background="@drawable/white_radius"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/search_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <TextView
+        android:padding="15dp"
+        android:textSize="15dp"
+        android:text="推荐"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:background="#ddd"
+        android:layout_height="5dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

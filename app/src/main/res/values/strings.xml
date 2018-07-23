@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">故事会</string>
+    <string name="phone_number">手机号</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="regist">注册</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="new_user">新用户</string>
+    <string name="get_confirmation">获取验证码</string>
+    <string name="confirmation">验证码</string>
+    <string name="secound">秒</string>
+    <string name="describe">版权所有©上海故事会文化传媒有限公司。 未经允许，不得转载。 技术支持：上海潇凌信息科技有限公司 </string>
+    <string name="change_forget">修改密码</string>
+    <string name="change_pwd_success">修改密码成功</string>
+    <string name="regist_success">注册成功</string>
+    <string name="nick_name">昵称</string>
+    <string name="story">故事</string>
+    <string name="noval">小说</string>
+    <string name="study">学习</string>
+    <string name="my">我的</string>
+    <string name="nomore">我是有底线的</string>
+    <string name="skip">跳过</string>
+    <string name="action_login">登陆</string>
+    <string name="search">搜索</string>
+    <string name="search_result">搜索结果</string>
+    <string name="book_read_settings">设置</string>
+    <string name="book_read_mode_day">夜间</string>
+    <string name="book_read_download">缓存</string>
+    <string name="book_read_mark">书签</string>
+    <string name="book_read_toc">目录</string>
+    <string name="success">授权成功</string>
+
+</resources>

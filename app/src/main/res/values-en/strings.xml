@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">story</string>
+    <string name="phone_number">phone</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="regist">regist</string>
+    <string name="forget_password">forget password</string>
+    <string name="new_user">regist</string>
+    <string name="get_confirmation">get code</string>
+    <string name="confirmation">code</string>
+    <string name="secound">s</string>
+    <string name="describe">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    <string name="change_forget">commit</string>
+    <string name="change_pwd_success">password changed</string>
+    <string name="regist_success">registed</string>
+    <string name="nick_name">nick name</string>
+    <string name="story">Story</string>
+    <string name="noval">Noval</string>
+    <string name="my">Person</string>
+    <string name="study">Study</string>
+    <string name="nomore">no more</string>
+    <string name="skip">skip</string>
+    <string name="action_login">login</string>
+</resources>

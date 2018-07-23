@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    android:elevation="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <ImageView
+            android:id="@+id/face"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:src="@color/colorRed"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:textSize="18dp"
+            android:id="@+id/book_name"
+            android:text="gushihui"
+            android:layout_alignTop="@+id/face"
+            android:layout_toRightOf="@+id/face"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/time"
+            android:textSize="14dp"
+            android:textColor="#666"
+            android:text="2000"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/book_name"
+           android:layout_alignLeft="@+id/book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/have_read"
+            android:layout_below="@+id/time"
+         android:layout_alignLeft="@+id/book_name"
+            android:text="yiyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_alignLeft="@+id/book_name"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/have_read"
+            android:layout_marginRight="10dp"
+            android:id="@+id/content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="yiyoauyiyoauyiyoauyiyoauyiyoauyiyoauyiyoauyiyoauyiyoauyiyoauyiyoauyiyoau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
