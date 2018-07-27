@@ -8,17 +8,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.lgs.study.R;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initEvent;
-import com.lgs.study.annotations.socpe.onFaild;
-import com.lgs.study.annotations.socpe.onSuccess;
 import com.lgs.study.base.BaseHttpActivity;
 import com.lgs.study.cons.Constants;
 import com.lgs.study.cons.Url;
 import com.lgs.study.presenter.LoginPresenter;
 import com.lgs.study.utils.SPUtils;
 import com.lgs.study.utils.ShowUtils;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
+import com.lscs.lgs.annotationlib.annotation.onSuccess;
 
 import java.util.concurrent.TimeUnit;
 
@@ -52,14 +49,12 @@ public class LoginActivity extends BaseHttpActivity<LoginPresenter> {
 
     }
 
-    @initData
     public void initData() {
         mPresenter.startAnim(mIvBgLogin);
         mEtLoginPassword.setText((String) SPUtils.get(Constants.pwd,""));
         mEtLoginPhone.setText((String) SPUtils.get(Constants.phone,""));
     }
 
-    @initEvent
     public void initEvent() {
         mPresenter.enableBtnLogin(mEtLoginPhone, mEtLoginPassword, mBtnLoginSign);
         mPresenter.requestEditPwdFocus(mEtLoginPhone, mEtLoginPassword);

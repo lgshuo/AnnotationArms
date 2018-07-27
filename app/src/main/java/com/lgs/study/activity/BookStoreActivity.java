@@ -12,15 +12,13 @@ import com.arialyy.aria.core.download.DownloadGroupTask;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lgs.study.R;
 import com.lgs.study.adapter.BookStoreAdapter;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initEvent;
 import com.lgs.study.base.BaseActivity;
 import com.lgs.study.base.IView;
 import com.lgs.study.bean.BookLinkBean;
 import com.lgs.study.presenter.BookStorePresneter;
 import com.lgs.study.utils.SPUtils;
 import com.lgs.study.utils.ShowUtils;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
 
 import java.util.ArrayList;
 
@@ -40,7 +38,6 @@ public class BookStoreActivity extends BaseActivity implements IView {
     private BookStoreAdapter mAdapter;
 
 
-    @initData
     public void initData() {
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         mAdapter = new BookStoreAdapter(R.layout.item_activity_book_store, mList);
@@ -54,7 +51,6 @@ public class BookStoreActivity extends BaseActivity implements IView {
 
     }
 
-    @initEvent
     public void initEvent() {
         mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override

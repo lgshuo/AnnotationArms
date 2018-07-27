@@ -3,15 +3,13 @@ package com.lgs.study.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.lgs.study.R;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.ContentView;
 import com.lgs.study.base.BaseActivity;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +22,6 @@ public class WebActivity extends BaseActivity {
     @BindView(R.id.web_view)
     WebView mWebView;
 
-    @initData
     public void initData() {
         mImmersionBar.transparentStatusBar().init();
         String link = getIntent().getStringExtra("link");

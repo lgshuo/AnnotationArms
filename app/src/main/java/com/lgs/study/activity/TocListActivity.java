@@ -2,7 +2,6 @@ package com.lgs.study.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -11,14 +10,12 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.lgs.study.R;
 import com.lgs.study.adapter.TocListAdapter;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initEvent;
-import com.lgs.study.annotations.socpe.onSuccess;
 import com.lgs.study.base.BaseHttpActivity;
 import com.lgs.study.bean.TocListBean;
 import com.lgs.study.cons.Url;
 import com.lgs.study.presenter.TocListPresenter;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
+import com.lscs.lgs.annotationlib.annotation.onSuccess;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +38,6 @@ public class TocListActivity extends BaseHttpActivity<TocListPresenter> {
         getActivityComponent().inject(this);
     }
 
-    @initData
     public void initData() {
         mImmersionBar.transparentStatusBar()
                 .init();
@@ -52,7 +48,6 @@ public class TocListActivity extends BaseHttpActivity<TocListPresenter> {
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    @initEvent
     public void initEvent(){
         mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override

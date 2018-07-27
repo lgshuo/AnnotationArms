@@ -10,13 +10,10 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lgs.study.R;
 import com.lgs.study.activity.BookStoreActivity;
 import com.lgs.study.adapter.StudyAdapter;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.initEvent;
 import com.lgs.study.base.BaseFragment;
 import com.lgs.study.bean.StudyBean;
-import com.lgs.study.utils.ShowUtils;
 import com.lgs.study.wan_android.IndexActivity;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
 
 import java.util.ArrayList;
 
@@ -32,7 +29,6 @@ public class PersonFragment extends BaseFragment {
     private ArrayList<StudyBean> mList = new ArrayList<>();
     private StudyAdapter mAdapter;
 
-    @initData
     public void initData() {
         mList.add(new StudyBean(R.drawable.ic_booksvg, "书籍"));
         mList.add(new StudyBean(R.drawable.ic_net, "网络"));
@@ -42,7 +38,6 @@ public class PersonFragment extends BaseFragment {
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    @initEvent
     public void initEvent() {
         mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override

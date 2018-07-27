@@ -37,7 +37,7 @@ dependencies {
     implementation rootProject.ext.dependencies["smart-refresh-header"]
     implementation rootProject.ext.dependencies["adapter"]
     implementation rootProject.ext.dependencies["banner"]
-//    implementation rootProject.ext.dependencies["pdf"]
+    //    implementation rootProject.ext.dependencies["pdf"]
     //base
     implementation rootProject.ext.dependencies["design"]
     implementation rootProject.ext.dependencies["recyclerview-v7"]
@@ -56,7 +56,7 @@ dependencies {
     implementation rootProject.ext.dependencies["rxlifecycle"]
     implementation rootProject.ext.dependencies["rxlifecycle-components"]
     implementation rootProject.ext.dependencies["rxbinding"]
-//    implementation rootProject.ext.dependencies["rxpermission"]
+    //    implementation rootProject.ext.dependencies["rxpermission"]
     //net
     implementation rootProject.ext.dependencies["okhttp"]
     implementation rootProject.ext.dependencies["okhttp-logging-interceptor"]
@@ -64,4 +64,6 @@ dependencies {
     implementation rootProject.ext.dependencies["ImmersionBar"]
     implementation rootProject.ext.dependencies["glide"]
     implementation rootProject.ext.dependencies["download"]
+    implementation project(':annotationLib')
+    annotationProcessor project(':annotationLib')
 }

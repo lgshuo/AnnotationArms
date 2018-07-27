@@ -5,11 +5,11 @@ import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import com.lgs.study.annotations.utils.InjectUtils;
 import com.lgs.study.globe.App;
 import com.lgs.study.model.HttpHelper;
 import com.lgs.study.model.RetrofitHelper;
 import com.lgs.study.utils.ACache;
+import com.lgs.study.utils.ResultInject;
 import com.lgs.study.utils.ShowUtils;
 import com.trello.rxlifecycle2.LifecycleProvider;
 
@@ -58,7 +58,7 @@ public class RxPresenter implements BasePresenter {
     }
 
 
-    public void loadNetData(final String url,final HashMap<String, String> params, int type, final boolean needCache) {
+    public void loadNetData(final String url, final HashMap<String, String> params, final int type, final boolean needCache) {
         final String cacheKey = url + params.toString();
         Flowable<String> cacheFlowable = Flowable.create(new FlowableOnSubscribe<String>() {
             @Override
@@ -102,14 +102,15 @@ public class RxPresenter implements BasePresenter {
                             int errcode = jsonObject.getInt("errcode");
                             String errmsg = jsonObject.getString("errmsg");
                             if (errcode == 0) {
-                                InjectUtils.injectOnSuccess(mView,url,s);
+                                ResultInject.injectSuccess(mView, url, type, s);
                             } else {
                                 if (mView instanceof Activity) {
                                     ShowUtils.showSnackBar((Activity) mView,errmsg);
                                 } else if (mView instanceof Fragment) {
                                     ShowUtils.showSnackBar(((Fragment) mView).getActivity(),errmsg);
                                 }
-                                InjectUtils.injectOnError(mView,url,s);
+                                ResultInject.injectFaild(mView, url, 0, s);
+
                             }
 
                         } catch (JSONException e) {
@@ -119,7 +120,7 @@ public class RxPresenter implements BasePresenter {
 
                     @Override
                     public void onError(Throwable t) {
-                        InjectUtils.injectOnFaild(mView,url,t);
+                        ResultInject.injectFaild(mView, url, type, t.getMessage());
                         if (mView instanceof Activity) {
                             ShowUtils.showSnackBar((Activity) mView,t.getMessage());
                         } else if (mView instanceof Fragment) {

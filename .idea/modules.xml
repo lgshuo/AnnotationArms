@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AnnotationArms.iml" filepath="$PROJECT_DIR$/AnnotationArms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotationLib/annotationLib.iml" filepath="$PROJECT_DIR$/annotationLib/annotationLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

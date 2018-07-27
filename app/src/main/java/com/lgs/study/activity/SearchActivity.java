@@ -21,10 +21,6 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.lgs.study.MainActivity;
 import com.lgs.study.R;
 import com.lgs.study.adapter.NovalTypeAdapter;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initEvent;
-import com.lgs.study.annotations.socpe.onSuccess;
 import com.lgs.study.base.BaseHttpActivity;
 import com.lgs.study.bean.NovalTypeBean;
 import com.lgs.study.cons.Url;
@@ -33,6 +29,8 @@ import com.lgs.study.presenter.SearchPresenter;
 import com.lgs.study.utils.ACache;
 import com.lgs.study.utils.CircularAnim;
 import com.lgs.study.utils.ShowUtils;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
+import com.lscs.lgs.annotationlib.annotation.onSuccess;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -59,7 +57,6 @@ public class SearchActivity extends BaseHttpActivity<SearchPresenter> {
         getActivityComponent().inject(this);
     }
 
-    @initData
     public void initData() {
         mImmersionBar
                 .titleBar(R.id.parent_search)
@@ -76,7 +73,6 @@ public class SearchActivity extends BaseHttpActivity<SearchPresenter> {
         mAdapter = new NovalTypeAdapter(R.layout.item_activity_noval_type, mList);
         mRecyclerView.setAdapter(mAdapter);
     }
-    @initEvent
     public void initEvent(){
         mSearchContent.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

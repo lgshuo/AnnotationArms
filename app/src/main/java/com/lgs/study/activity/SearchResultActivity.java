@@ -13,16 +13,14 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.lgs.study.R;
 import com.lgs.study.adapter.StoryAdapter;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initEvent;
-import com.lgs.study.annotations.socpe.onError;
-import com.lgs.study.annotations.socpe.onSuccess;
 import com.lgs.study.base.BaseHttpActivity;
 import com.lgs.study.bean.StoryBean;
 import com.lgs.study.cons.Url;
 import com.lgs.study.presenter.SearchResultPresenter;
 import com.lgs.study.view.SuperRecyclerView;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
+import com.lscs.lgs.annotationlib.annotation.onFaild;
+import com.lscs.lgs.annotationlib.annotation.onSuccess;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -53,7 +51,6 @@ public class SearchResultActivity extends BaseHttpActivity<SearchResultPresenter
         getActivityComponent().inject(this);
     }
 
-    @initData
     public void initData() {
         mImmersionBar
                 .titleBar(R.id.toolbar)
@@ -71,7 +68,6 @@ public class SearchResultActivity extends BaseHttpActivity<SearchResultPresenter
         mSuperRecyclerView.setRefreshing();
     }
 
-    @initEvent
     public void initEvent() {
         mSuperRecyclerView.setOnRefreshListerner(new OnRefreshListener() {
             @Override
@@ -120,7 +116,7 @@ public class SearchResultActivity extends BaseHttpActivity<SearchResultPresenter
         mSuperRecyclerView.finishLoading();
     }
 
-    @onError(url = Url.searchStory)
+    @onFaild(url = Url.searchStory)
     public void requestSearchFaild(String s) {
         mSuperRecyclerView.loadMoreEnable(false);
         mSuperRecyclerView.finishLoading();

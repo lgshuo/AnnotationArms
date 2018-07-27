@@ -2,19 +2,16 @@ package com.lgs.study.fragment;
 
 import android.support.v7.widget.LinearLayoutManager;
 
-import com.lgs.study.annotations.socpe.ContentView;
 import com.google.gson.Gson;
 import com.lgs.study.R;
 import com.lgs.study.adapter.NovalAdapter;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.initEvent;
-import com.lgs.study.annotations.socpe.onSuccess;
 import com.lgs.study.base.BaseHttpFragment;
 import com.lgs.study.bean.NovalBean;
 import com.lgs.study.cons.Url;
 import com.lgs.study.presenter.NovalPresenter;
 import com.lgs.study.view.SuperRecyclerView;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
+import com.lscs.lgs.annotationlib.annotation.onSuccess;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
@@ -40,7 +37,6 @@ public class NovalFragment extends BaseHttpFragment<NovalPresenter> {
         getFragmentComponent().inject(this);
     }
 
-    @initData
     public void initData() {
         mRecyclerView.getRefreshView().setPrimaryColors(0xffd50f09);
         mAdapter = new NovalAdapter(R.layout.item_fragment_noval, mList);
@@ -49,7 +45,6 @@ public class NovalFragment extends BaseHttpFragment<NovalPresenter> {
         mRecyclerView.setRefreshing();
     }
 
-    @initEvent
     public void initEvent() {
         mRecyclerView.setOnRefreshListerner(new OnRefreshListener() {
             @Override

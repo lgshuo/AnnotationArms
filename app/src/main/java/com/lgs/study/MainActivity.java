@@ -12,16 +12,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-import com.lgs.study.annotations.socpe.ContentView;
 import com.lgs.study.activity.LoginActivity;
 import com.lgs.study.activity.SearchActivity;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.initEvent;
 import com.lgs.study.base.BaseActivity;
 import com.lgs.study.presenter.MainPresenter;
 import com.lgs.study.utils.AppManager;
 import com.lgs.study.utils.FragNavController;
 import com.lgs.study.utils.ShowUtils;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -48,7 +46,6 @@ public class MainActivity extends BaseActivity {
     private MainPresenter mPresenter;
 
 
-    @initData
     public void initData() {
         mPresenter = new MainPresenter(this);
         mPresenter.requestPermission();
@@ -78,7 +75,6 @@ public class MainActivity extends BaseActivity {
                 });
     }
 
-    @initEvent
     public void initEvent() {
         mBottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override

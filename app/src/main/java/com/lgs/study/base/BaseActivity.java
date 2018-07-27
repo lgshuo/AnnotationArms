@@ -15,8 +15,6 @@ import com.lgs.study.activity.LoginActivity;
 import com.lgs.study.activity.ReadActivity;
 import com.lgs.study.activity.RegistActivity;
 import com.lgs.study.activity.StartActivity;
-import com.lgs.study.activity.TocListActivity;
-import com.lgs.study.annotations.utils.InjectUtils;
 import com.lgs.study.utils.InjectHelper;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
@@ -30,7 +28,7 @@ import butterknife.ButterKnife;
  * Created by admin on 2018/4/19.
  */
 
-public class BaseActivity extends RxAppCompatActivity implements IView {
+public abstract class BaseActivity extends RxAppCompatActivity implements IView {
     private Class<Activity>[] cls = new Class[]{StartActivity.class, LoginActivity.class, ForgetPwdActivity.class, RegistActivity.class, ReadActivity.class};
     protected ImmersionBar mImmersionBar;
 
@@ -38,7 +36,7 @@ public class BaseActivity extends RxAppCompatActivity implements IView {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mImmersionBar = ImmersionBar.with(this);
-        InjectUtils.inject(this);
+        setContentView(InjectHelper.inject(this));
         if (Arrays.asList(cls).contains(getClass())) {
             mImmersionBar
                     .transparentBar()
@@ -51,10 +49,14 @@ public class BaseActivity extends RxAppCompatActivity implements IView {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         ButterKnife.bind(this);
-        InjectUtils.injectInitData(this);
-        InjectUtils.injectInitEvent(this);
-
+        initData();
+        initEvent();
     }
+
+    protected void initEvent() {
+    }
+
+    protected abstract void initData();
 
     protected void startActivity(Class<? extends Activity> clazz) {
         Intent intent = new Intent(this, clazz);

@@ -1,28 +1,20 @@
 package com.lgs.study.fragment;
 
-import android.os.Build;
-import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.lgs.study.R;
 import com.lgs.study.activity.TocListActivity;
 import com.lgs.study.adapter.StoryAdapter;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.initEvent;
-import com.lgs.study.annotations.socpe.onSuccess;
 import com.lgs.study.base.BaseHttpFragment;
 import com.lgs.study.bean.StoryBean;
 import com.lgs.study.cons.Url;
 import com.lgs.study.presenter.StoryPresenter;
 import com.lgs.study.view.SuperRecyclerView;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
+import com.lscs.lgs.annotationlib.annotation.onSuccess;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -54,7 +46,6 @@ public class StoryFragment extends BaseHttpFragment<StoryPresenter> {
         getFragmentComponent().inject(this);
     }
 
-    @initData
     public void initData() {
         mSuperRecyclerView.getRefreshView().setPrimaryColors(0xff01a6ff);
         View head = View.inflate(getActivity(), R.layout.fragment_story_head, null);
@@ -67,7 +58,6 @@ public class StoryFragment extends BaseHttpFragment<StoryPresenter> {
         mPresenter.requestBanner();
     }
 
-    @initEvent()
     public void initEvent() {
         mSuperRecyclerView.setOnRefreshListerner(new OnRefreshListener() {
             @Override

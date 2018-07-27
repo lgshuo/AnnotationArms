@@ -1,16 +1,16 @@
 package com.lgs.study.activity;
 
 import android.widget.ImageView;
-import com.lgs.study.MainActivity;
+
 import com.lgs.study.R;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.ContentView;
 import com.lgs.study.base.BaseActivity;
 import com.lgs.study.base.IView;
 import com.lgs.study.bean.StartBean;
 import com.lgs.study.presenter.StartPresenter;
 import com.lgs.study.utils.RxBus;
 import com.lgs.study.view.CompletedView;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 import io.reactivex.functions.Consumer;
@@ -27,7 +27,6 @@ public class StartActivity extends BaseActivity implements IView {
     public StartPresenter mStartPresenter;
 
 
-    @initData
     public void initData() {
         mStartPresenter = new StartPresenter();
         mStartPresenter.attachView(this);

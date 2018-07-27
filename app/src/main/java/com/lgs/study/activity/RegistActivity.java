@@ -7,16 +7,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.lgs.study.R;
-import com.lgs.study.annotations.socpe.ContentView;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.initEvent;
-import com.lgs.study.annotations.socpe.onSuccess;
 import com.lgs.study.base.BaseHttpActivity;
 import com.lgs.study.cons.Constants;
 import com.lgs.study.cons.Url;
 import com.lgs.study.presenter.RegistPrsenter;
 import com.lgs.study.utils.RxBus;
 import com.lgs.study.utils.SPUtils;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
+import com.lscs.lgs.annotationlib.annotation.onSuccess;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,12 +46,10 @@ public class RegistActivity extends BaseHttpActivity<RegistPrsenter> {
         getActivityComponent().inject(this);
     }
 
-    @initData
     public void initData() {
         mPresenter.startAnim(mIvBgLogin);
     }
 
-    @initEvent
     public void initEvent() {
         mPresenter.enableBtnConfirmation(mEtLoginPhone, mBtnGetConfirmation);
         mPresenter.changeFocus(mEtLoginPhone, mEtLoginConfirmation, 11);

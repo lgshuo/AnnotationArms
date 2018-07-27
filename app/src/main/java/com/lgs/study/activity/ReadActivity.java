@@ -10,10 +10,9 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.lgs.study.R;
-import com.lgs.study.annotations.socpe.initData;
-import com.lgs.study.annotations.socpe.ContentView;
 import com.lgs.study.base.BaseHttpActivity;
 import com.lgs.study.presenter.ReadPresenter;
+import com.lscs.lgs.annotationlib.annotation.ContentView;
 
 import java.util.HashMap;
 
@@ -72,7 +71,6 @@ public class ReadActivity extends BaseHttpActivity<ReadPresenter> {
         getActivityComponent().inject(this);
     }
 
-    @initData
     public void initData() {
         mPresenter.loadNetData("http://storyimg.storychina.cn//BookTextList/20180330/201803301023204859.txt",new HashMap<String, String>());
     }
