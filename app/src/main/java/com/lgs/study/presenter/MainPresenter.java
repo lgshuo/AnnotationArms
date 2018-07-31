@@ -1,7 +1,7 @@
 package com.lgs.study.presenter;
 
 import android.support.v4.app.Fragment;
-import com.lgs.study.MainActivity;
+import com.lgs.study.activity.MainActivity;
 import com.lgs.study.fragment.NovalFragment;
 import com.lgs.study.fragment.PersonFragment;
 import com.lgs.study.fragment.StoryFragment;
@@ -32,6 +32,6 @@ public class MainPresenter {
     public void bindBottomBarData(List<Fragment> fragmentList) {
         fragmentList.add(new StoryFragment());
         fragmentList.add(new NovalFragment());
-        fragmentList.add(new PersonFragment());
+//        fragmentList.add(new PersonFragment());
     }
 }

@@ -17,7 +17,7 @@
         android:name=".globe.App"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.StartActivity"/>
-        <activity android:name=".MainActivity"
+        <activity android:name=".activity.MainActivity"
             android:configChanges="orientation|keyboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,6 @@
         <activity android:name=".activity.ReadActivity" />
         <activity android:name=".activity.TocListActivity" />
         <activity android:name=".activity.WebActivity" />
-        <activity android:name=".activity.BookStoreActivity" />
         <activity android:name=".wan_android.IndexActivity" />
     </application>
 

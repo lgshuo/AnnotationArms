@@ -1,30 +1,22 @@
 package com.lgs.study.activity;
 
-import android.animation.Animator;
 import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
-import android.os.Build;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewAnimationUtils;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.gyf.barlibrary.ImmersionBar;
-import com.lgs.study.MainActivity;
 import com.lgs.study.R;
 import com.lgs.study.adapter.NovalTypeAdapter;
 import com.lgs.study.base.BaseHttpActivity;
 import com.lgs.study.bean.NovalTypeBean;
 import com.lgs.study.cons.Url;
-import com.lgs.study.globe.App;
 import com.lgs.study.presenter.SearchPresenter;
 import com.lgs.study.utils.ACache;
 import com.lgs.study.utils.CircularAnim;
@@ -33,7 +25,6 @@ import com.lscs.lgs.annotationlib.annotation.ContentView;
 import com.lscs.lgs.annotationlib.annotation.onSuccess;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 import butterknife.BindView;
 import butterknife.OnClick;

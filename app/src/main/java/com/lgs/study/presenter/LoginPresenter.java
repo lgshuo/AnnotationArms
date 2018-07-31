@@ -2,47 +2,34 @@ package com.lgs.study.presenter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.jakewharton.rxbinding2.view.RxView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
-import com.lgs.study.MainActivity;
+import com.lgs.study.activity.MainActivity;
 import com.lgs.study.R;
-import com.lgs.study.activity.LoginActivity;
 import com.lgs.study.base.RxPresenter;
 import com.lgs.study.bean.LoginBean;
 import com.lgs.study.cons.Constants;
 import com.lgs.study.cons.Url;
-import com.lgs.study.globe.App;
 import com.lgs.study.model.RetrofitHelper;
 import com.lgs.study.utils.RuleUtils;
 import com.lgs.study.utils.RxBus;
 import com.lgs.study.utils.SPUtils;
 import com.lgs.study.utils.ShowUtils;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.HashMap;
-import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
-import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by admin on 2018/4/26.

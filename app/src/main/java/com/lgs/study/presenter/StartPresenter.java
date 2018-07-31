@@ -1,12 +1,9 @@
 package com.lgs.study.presenter;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.lgs.study.MainActivity;
 import com.lgs.study.R;
 import com.lgs.study.activity.LoginActivity;
 import com.lgs.study.activity.StartActivity;
@@ -14,7 +11,6 @@ import com.lgs.study.base.BasePresenter;
 import com.lgs.study.base.IView;
 import com.lgs.study.bean.StartBean;
 import com.lgs.study.utils.RxBus;
-import com.lgs.study.view.CompletedView;
 
 /**
  * Created by admin on 2018/4/26.

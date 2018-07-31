@@ -1,14 +1,11 @@
 package com.lgs.study.fragment;
 
-import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SnapHelper;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lgs.study.R;
-import com.lgs.study.activity.BookStoreActivity;
 import com.lgs.study.adapter.StudyAdapter;
 import com.lgs.study.base.BaseFragment;
 import com.lgs.study.bean.StudyBean;

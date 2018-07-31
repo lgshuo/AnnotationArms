@@ -2,7 +2,6 @@ package com.lgs.study.di.component;
 
 import android.app.Activity;
 
-import com.lgs.study.MainActivity;
 import com.lgs.study.activity.ForgetPwdActivity;
 import com.lgs.study.activity.LoginActivity;
 import com.lgs.study.activity.ReadActivity;

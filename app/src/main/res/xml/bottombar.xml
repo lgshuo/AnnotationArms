@@ -10,9 +10,9 @@
         icon="@drawable/noval"
         title="@string/noval"
         barColorWhenSelected="@color/colorRed" />
-    <tab
+<!--    <tab
         id="@+id/tab_person"
         icon="@drawable/study"
         title="@string/study"
-        barColorWhenSelected="@color/colorPerson" />
+        barColorWhenSelected="@color/colorPerson" />-->
 </tabs>
