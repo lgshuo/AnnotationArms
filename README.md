@@ -35,3 +35,7 @@
             }
         });
 
+# 效果图
+![](https://github.com/lgshuo/AnnotationArms/blob/master/pic/home.png)![](https://github.com/lgshuo/AnnotationArms/blob/master/pic/story.png)![](https://github.com/lgshuo/AnnotationArms/blob/master/pic/DrawerLayout.png)
+
+![](https://github.com/lgshuo/AnnotationArms/blob/master/pic/bottomAnim.gif)![](https://github.com/lgshuo/AnnotationArms/blob/master/pic/circleAnim.gif)![](https://github.com/lgshuo/AnnotationArms/blob/master/pic/scrollAnim.gif)
